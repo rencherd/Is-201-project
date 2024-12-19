@@ -1,0 +1,245 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+/* Body styling */
+body {
+    font-family: 'Roboto', Arial, sans-serif;
+    background-image: url('https://i.pinimg.com/736x/86/c9/69/86c969a8468f9ea4e8586a672fe1385d.jpg');
+    background-size: cover;
+    background-position: center;
+    background-attachment: fixed;
+    color: #676767;
+    line-height: 1.8;
+    padding-top: 20px;
+    position: relative;
+}
+
+body::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: rgba(0, 0, 0, 0.5); /* Semi-transparent overlay */
+    z-index: -1; /* Keeps it behind the content */
+}
+
+/* Add margin-top to the first section to create a gap */
+section:first-of-type {
+    margin-top: 300px; /* Adjust as needed */
+}
+
+
+/* Header styling */
+header {
+    background-color: #2A3C56; /* Cool, deep blue background */
+    color: #FFF; /* White text */
+    text-align: center;
+    padding: 30px;
+    border-bottom: 3px solid #BDC3C7; /* Light gray bottom border */
+    box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.1); /* Subtle shadow */
+}
+
+h1 {
+    font-size: 3em;
+    font-weight: 700;
+    margin-bottom: 10px;
+    color: #FFF; /* White text for the title */
+}
+
+h2 {
+    color: #6b6b6b; /* Deep blue color for subheadings */
+    font-size: 1.5em;
+    margin-bottom: 10px;
+    font-weight: 500;
+}
+
+/* Section styling */
+section {
+    margin: 30px auto;
+    padding: 20px;
+    background-color: white;
+    border-radius: 6px; /* Less rounded corners */
+    box-shadow: 0px 6px 12px rgba(0, 0, 0, 0.1); /* Soft shadow */
+    width: 90%;
+    max-width: 1200px;
+    border-left: 5px solid #BDC3C7; /* Light gray accent border */
+}
+
+/* List styling */
+ol, ul {
+    margin-left: 20px;
+    list-style: none;
+}
+
+ol li, ul li {
+    padding-left: 20px;
+    position: relative;
+}
+
+ol li:before, ul li:before {
+    content: '•'; 
+    color: #3498DB; /* Soft blue bullet */
+    position: absolute;
+    left: 0;
+    font-size: 20px;
+}
+
+/* Image styling */
+img {
+    max-width: 100%;
+    border-radius: 6px; /* Less rounded corners */
+    margin-top: 20px;
+    transition: transform 0.3s ease-in-out;
+}
+
+img:hover {
+    transform: scale(1.05); /* Hover effect to zoom */
+}
+
+/* YouTube video styling */
+iframe {
+    width: 100%;
+    height: 500px;
+    border: none;
+    border-radius: 6px; /* Less rounded corners */
+    margin-top: 20px;
+}
+
+/* Link styling */
+a {
+    color: #3498DB; /* Soft blue links */
+    text-decoration: none;
+    font-weight: 500;
+    transition: color 0.3s ease;
+}
+
+a:hover {
+    text-decoration: underline;
+    color: #1C6FA4; /* Darker blue on hover */
+}
+
+/* Paragraph styling */
+p {
+    font-size: 1.1em;
+    color: #969696;
+    margin-bottom: 15px;
+}
+
+/* Footer styling */
+footer {
+    text-align: center;
+    padding: 20px;
+    background-color: #2A3C56; /* Cool blue background */
+    color: #FFF;
+    margin-top: 40px;
+    border-radius: 6px; /* Less rounded corners */
+    box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.1);
+}
+
+/* Button styling */
+button {
+    background-color: #3498DB; /* Soft blue button */
+    color: white;
+    padding: 12px 24px;
+    font-size: 1.1em;
+    border: none;
+    border-radius: 6px; /* Less rounded corners */
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+}
+
+button:hover {
+    background-color: #2980B9; /* Darker blue on hover */
+}
+
+/* Responsive Design */
+@media (max-width: 768px) {
+    header {
+        padding: 20px;
+    }
+
+    h1 {
+        font-size: 2.5em;
+    }
+
+    section {
+        width: 90%;
+        margin-top: 20px;
+    }
+
+    iframe {
+        height: 300px;
+    }
+
+    footer {
+        padding: 10px;
+    }
+}
+/* Style for the image gallery */
+.image-gallery {
+    display: grid; /* Use grid layout for a responsive gallery */
+    grid-template-columns: repeat(auto-fill, minmax(250px, 1fr)); /* Create a flexible grid */
+    gap: 15px; /* Space between images */
+    justify-items: center; /* Center the images horizontally */
+    margin: 20px 0; /* Add margin for spacing */
+}
+
+/* Style for the image container to enforce 1:1 aspect ratio */
+.image-gallery img {
+    width: 100%; /* Make images take up full width of their container */
+    height: 100%; /* Ensure the height is the same as width to make it square */
+    object-fit: cover; /* Crop and fill the image without distorting (default) */
+    border-radius: 8px; /* Optional: adds rounded corners to images */
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1); /* Optional: adds subtle shadow to images */
+    display: block; /* Remove any space below images */
+}
+
+/* Apply object-fit: contain to images in the "How I Got It" section */
+/*section:nth-of-type(1) .image-gallery img,
+section:nth-of-type(2) .image-gallery img {*/
+  /*  object-fit: contain;*/ /* Make sure the entire image fits within the square */
+
+
+/* Optional: Styling for hover effect */
+.image-gallery img:hover {
+    transform: scale(1.05); /* Slight zoom effect on hover */
+    transition: transform 0.3s ease; /* Smooth transition */
+}
+/* Add a subtle hover effect for the images inside the links */
+.image-gallery a:hover img {
+    opacity: 0.8; /* Slight opacity change to indicate clickable item */
+    transform: scale(1.05); /* Slight zoom effect on hover */
+}
+
+/* Optional: Add a transition for smooth scaling/opacity change */
+.image-gallery a img {
+    transition: transform 0.3s ease, opacity 0.3s ease;
+}
+/* Add this to your Styles2.css or inside a <style> block in the <head> */
+
+/* Container for the header content */
+.header-container {
+    position: relative;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+/* Styling for the Home link */
+.home-link {
+    color: grey; /* Set the font color to grey */
+    font-size: 14px; /* Adjust the font size if needed */
+    text-decoration: none; /* Remove underline */
+    position: absolute; /* Position it in the top-right corner */
+    right: 20px; /* Set distance from the right */
+    top: 10px; /* Set distance from the top */
+}
+
+.home-link:hover {
+    text-decoration: underline; /* Add an underline effect on hover */
+}

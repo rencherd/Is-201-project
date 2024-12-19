@@ -1,0 +1,92 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Build Your Table Game</title>
+  <style>
+    body {
+      font-family: Arial, sans-serif;
+      background-color: #f4f4f4;
+      text-align: center;
+      padding: 20px;
+    }
+
+    h1 {
+      color: #333;
+    }
+
+    .instructions {
+      background-color: #fff;
+      padding: 20px;
+      border-radius: 10px;
+      box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+      display: inline-block;
+      margin-top: 20px;
+    }
+
+    ul {
+      text-align: left;
+      list-style-type: none;
+      padding: 0;
+    }
+
+    li {
+      margin: 10px 0;
+      font-size: 18px;
+    }
+
+    li::before {
+      content: "• ";
+      color: #4CAF50;
+      font-size: 22px;
+    }
+
+    #canvas {
+      margin-top: 30px;
+      border: 1px solid #ccc;
+      background-color: #e6e6e6;
+      display: block;
+      margin-left: auto;
+      margin-right: auto;
+    }
+
+    /* Styling for the back link in the top left corner */
+    .back-link {
+      position: absolute;
+      top: 20px;
+      left: 20px;
+      font-size: 18px;
+      color: #007BFF;
+      text-decoration: none;
+    }
+
+    .back-link:hover {
+      text-decoration: underline;
+    }
+  </style>
+</head>
+<body>
+
+  <!-- Back link in the top left corner -->
+  <a href="../Experience.html" class="back-link">Back</a>
+
+  <h1>Build Your Table Game</h1>
+
+  <div class="instructions">
+    <h2>Instructions:</h2>
+    <ul>
+      <li><strong>Drag the Pieces:</strong> Use your mouse to drag the wooden pieces (legs, table top, and flower pot) to the correct positions.</li>
+      <li><strong>Assemble the Table:</strong> Position the wooden legs at the bottom corners of the table, and place the table top in the center, touching the legs.</li>
+      <li><strong>Place the Flower Pot:</strong> Once the table is assembled, drag the flower pot to the spot directly above the table, and it will automatically snap into place.</li>
+      <li><strong>Complete the Table:</strong> Once all the pieces are snapped together, you've built your table with a flower pot on top!</li>
+    </ul>
+    <p>Enjoy building your table!</p>
+  </div>
+
+  <canvas id="canvas"></canvas>
+
+  <script src="table.js"></script>
+
+</body>
+</html>
